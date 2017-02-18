@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-sscguoxin" version="1.2.9" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SSCGXPhoto</name>
+    <js-module name="SSCGXPhoto" src="www/SSCGXPhoto.js">
+        <clobbers target="cordova.plugins.SSCGXPhoto"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="SSCGXPhoto">
+                <param name="android-package" value="cordova.plugin.SSCGXPhoto.guoxin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <framework src="src/android/photosdk.gradle" custom="true" type="gradleReference"/>
+        <resource-file src="src/android/photosdk.aar" target="libs/photosdk.aar"/>
+        <source-file src="src/android/guoxin.java" target-dir="src/cordova/plugin/guoxin/guoxin"/>
+    </platform>
+
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="SSCGXPhoto">
+                <param name="ios-package" value="GXPlugin"/>
+            </feature>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
+        </config-file>
+        <!--依赖库-->
+        <source-file src="src/ios/libGKStatic.a" framework="true"/>
+        <framework src="libsqlite3.tbd"/>
+        <framework src="libstdc++.tbd"/>
+        <header-file src="src/ios/GKStatic.h"/>
+        <source-file src="src/ios/GXPlugin.m"/>
+        <!--pictures-->
+        <resource-file src="src/ios/photos/SVProgressHUD.bundle"/>
+        <resource-file src="src/ios/photos/CLImageEditor.bundle"/>
+        <resource-file src="src/ios/photos/Assets/ImageError.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageError@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageError@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelected.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelected@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelected@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOff.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOff@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOff@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOn.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOn@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/ImageSelectedSmallOn@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLarge.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLarge@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLarge@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLargeTap.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLargeTap@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/PlayButtonOverlayLargeTap@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemArrow.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemArrow@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemArrow@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemGrid.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemGrid@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/UIBarButtonItemGrid@3x.psd"/>
+        <resource-file src="src/ios/photos/Assets/VideoOverlay.psd"/>
+        <resource-file src="src/ios/photos/Assets/VideoOverlay@2x.psd"/>
+        <resource-file src="src/ios/photos/Assets/VideoOverlay@3x.psd"/>
+        <resource-file src="src/ios/photos/Button/app_btn_camera_normal@2x.png"/>
+        <resource-file src="src/ios/photos/Button/app_btn_camera_normal@3X.png"/>
+        <resource-file src="src/ios/photos/Button/bind_tool_normal@2x.png"/>
+        <resource-file src="src/ios/photos/Button/bind_tool_normal@3x.png"/>
+        <resource-file src="src/ios/photos/Button/bind_tool_select@2x.png"/>
+        <resource-file src="src/ios/photos/Button/bind_tool_select@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_actionsheet_delete_default@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_actionsheet_delete_default@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_back_default@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_back_default@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_complete_default@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_complete_default@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_Delete_navigation_default@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_Delete_navigation_default@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_select_0_selected@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_select_0_selected@3x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_select_normal_default@2x.png"/>
+        <resource-file src="src/ios/photos/Button/btn_select_normal_default@3x.png"/>
+        <resource-file src="src/ios/photos/Button/detail_tool_normal@2x.png"/>
+        <resource-file src="src/ios/photos/Button/detail_tool_normal@3x.png"/>
+        <resource-file src="src/ios/photos/Button/detail_tool_select@2x.png"/>
+        <resource-file src="src/ios/photos/Button/detail_tool_select@3x.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_auto.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_auto@2x.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_auto@3x.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_on.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_on@2x.png"/>
+        <resource-file src="src/ios/photos/Button/flashing_on@3x.png"/>
+        <resource-file src="src/ios/photos/Button/import_tool_normal@2x.png"/>
+        <resource-file src="src/ios/photos/Button/import_tool_normal@3x.png"/>
+        <resource-file src="src/ios/photos/Button/import_tool_select@2x.png"/>
+        <resource-file src="src/ios/photos/Button/import_tool_select@3x.png"/>
+        <resource-file src="src/ios/photos/Button/photo_tool_norma@2x.png"/>
+        <resource-file src="src/ios/photos/Button/photo_tool_norma@3x.png"/>
+        <resource-file src="src/ios/photos/Button/photo_tool_select@2x.png"/>
+        <resource-file src="src/ios/photos/Button/photo_tool_select@3x.png"/>
+        <resource-file src="src/ios/photos/Button/shot.png"/>
+        <resource-file src="src/ios/photos/Button/shot@2x.png"/>
+        <resource-file src="src/ios/photos/Button/shot@3x.png"/>
+        <resource-file src="src/ios/photos/Button/shot_h.png"/>
+        <resource-file src="src/ios/photos/Button/shot_h@2x.png"/>
+        <resource-file src="src/ios/photos/Button/shot_h@3x.png"/>
+        <resource-file src="src/ios/photos/Button/switch_camera_h.png"/>
+        <resource-file src="src/ios/photos/Button/switch_camera_h@2x.png"/>
+        <resource-file src="src/ios/photos/Button/switch_camera_h@3x.png"/>
+        <resource-file src="src/ios/photos/Button/tick_type.png"/>
+        <resource-file src="src/ios/photos/Button/tick_type@2x.png"/>
+        <resource-file src="src/ios/photos/Button/tick_type@3x.png"/>
+        <resource-file src="src/ios/photos/frame/frame1.png"/>
+        <resource-file src="src/ios/photos/frame/frame16.png"/>
+        <resource-file src="src/ios/photos/frame/frame16@2x.png"/>
+        <resource-file src="src/ios/photos/frame/frame16@3x.png"/>
+        <resource-file src="src/ios/photos/frame/frame1@2x.png"/>
+        <resource-file src="src/ios/photos/frame/frame1@3x.png"/>
+        <resource-file src="src/ios/photos/frame/frame2.png"/>
+        <resource-file src="src/ios/photos/frame/frame2@2x.png"/>
+        <resource-file src="src/ios/photos/frame/frame2@3x.png"/>
+        <resource-file src="src/ios/photos/other/arrow1.png"/>
+        <resource-file src="src/ios/photos/other/arrow2.png"/>
+        <resource-file src="src/ios/photos/other/arrow3.png"/>
+        <resource-file src="src/ios/photos/other/too_bar_1@2x.png"/>
+        <resource-file src="src/ios/photos/other/too_bar_1@3x.png"/>
+        <resource-file src="src/ios/photos/other/tool_bar@2x.png"/>
+        <resource-file src="src/ios/photos/other/tool_bar@3x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/camera_line.png"/>
+        <resource-file src="src/ios/photos/SCCamera/camera_line@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/camera_line_h.png"/>
+        <resource-file src="src/ios/photos/SCCamera/camera_line_h@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/close_cha.png"/>
+        <resource-file src="src/ios/photos/SCCamera/close_cha@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/close_cha_h.png"/>
+        <resource-file src="src/ios/photos/SCCamera/close_cha_h@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/flashing_off.png"/>
+        <resource-file src="src/ios/photos/SCCamera/flashing_off@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/switch_camera.png"/>
+        <resource-file src="src/ios/photos/SCCamera/switch_camera@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/touch_focus.png"/>
+        <resource-file src="src/ios/photos/SCCamera/touch_focus@2x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/touch_focus_x.png"/>
+        <resource-file src="src/ios/photos/SCCamera/touch_focus_x@2x.png"/>
+    </platform>
+</plugin>
