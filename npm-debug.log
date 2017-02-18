@@ -45,7 +45,7 @@
 21 silly publish   license: 'MIT',
 21 silly publish   bugs: { url: 'https://github.com/chd123456/SSCPlugin_GuoXin/issues' },
 21 silly publish   homepage: 'https://github.com/chd123456/SSCPlugin_GuoXin#readme',
-21 silly publish   gitHead: 'fb75d892310af125052a5ae433b68313e1975568',
+21 silly publish   gitHead: '4aa9724ae74229875b2dae826cc00482391b467b',
 21 silly publish   readme: 'ERROR: No README data found!',
 21 silly publish   _id: 'cordova-plugin-sscybzguoxin@0.0.1',
 21 silly publish   _shasum: 'f5ebbd354c1c3053889ea70dfd1d58f7a2a965c7',
@@ -67,8 +67,8 @@
 29 silly publish uploading /Users/hida/.npm/cordova-plugin-sscybzguoxin/0.0.1/package.tgz
 30 verbose request uri https://registry.npm.taobao.org/cordova-plugin-sscybzguoxin
 31 verbose request sending authorization for write operation
-32 info attempt registry request try #1 at 12:48:55
-33 verbose request id 0cc3e1e9ce3e033d
+32 info attempt registry request try #1 at 12:49:59
+33 verbose request id f71001a9f0927007
 34 http request PUT https://registry.npm.taobao.org/cordova-plugin-sscybzguoxin
 35 http 413 https://registry.npm.taobao.org/cordova-plugin-sscybzguoxin
 36 verbose bad json <html>
@@ -79,7 +79,7 @@
 36 verbose bad json </body>
 36 verbose bad json </html>
 37 error registry error parsing json
-38 verbose headers { date: 'Sat, 18 Feb 2017 04:48:55 GMT',
+38 verbose headers { date: 'Sat, 18 Feb 2017 04:50:00 GMT',
 38 verbose headers   'content-type': 'text/html',
 38 verbose headers   'content-length': '207',
 38 verbose headers   connection: 'keep-alive' }

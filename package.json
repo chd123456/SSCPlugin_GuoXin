@@ -1,17 +1,20 @@
 {
-  "name": "cordova-plugin-sscybzguoxin",
-  "version": "0.0.1",
-  "description": "upload and download photos",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "cordova-plugin-sscybzguoxin",//注意这里的格式，并只能为小写
+  "version": "1.0.0",
+  "description": "uplod photo and downlod photo",
+  "cordova": {
+    "id": "com.yonyou.sscybzguoxin",
+    "platforms": [
+      "ios"
+    ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chd123456/SSCPlugin_GuoXin.git"
+    "url": "https://github.com/chd123456/SSCPlugin_GuoXin.git"
   },
   "keywords": [
-    "photos"
+    "ecosystem:cordova",
+    "cordova-ios"
   ],
   "author": "Hida",
   "license": "MIT",
