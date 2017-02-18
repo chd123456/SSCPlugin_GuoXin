@@ -1,6 +1,6 @@
 {
-  "name": "cordova-plugin-sscguoxin",
-  "version": "1.2.9",
+  "name": "cordova-plugin-sscybzguoxin",
+  "version": "0.0.1",
   "description": "upload and download photos",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YanjiangWu/SSCGuoXinPlugin.git"
+    "url": "git+https://github.com/chd123456/SSCPlugin_GuoXin.git"
   },
   "keywords": [
     "photos"
   ],
-  "author": "yanjiangwu",
+  "author": "Hida",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YanjiangWu/SSCGuoXinPlugin/issues"
+    "url": "https://github.com/chd123456/SSCPlugin_GuoXin/issues"
   },
-  "homepage": "https://github.com/YanjiangWu/SSCGuoXinPlugin#readme"
+  "homepage": "https://github.com/chd123456/SSCPlugin_GuoXin#readme"
 }
